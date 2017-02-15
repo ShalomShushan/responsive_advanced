@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" id="form_submission_html">
+    <head>
+        <title>Form Processor</title>
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link href="tech_docs.css" type="text/css" rel="stylesheet" />
+        <meta http-equiv="content-type"
+              content="text/html; charset=iso-8859-1" />
+    </head>
+    <body id="form_submission">
+        <div id="page">
+            <header>
+                <a class="logo" href="index.html"><span>Devs Meetup</span></a>
+            </header>
+            <script language="javascript" type="text/javascript">
+                //<![CDATA[
+                document.write("<h1>Your form has been submitted!</h1><h2>You entered the following data:</h2>");
+                var formData = location.search;
+                formData = formData.substring(1, formData.length);
+                while (formData.indexOf("+") != -1) {
+                    formData = formData.replace("+", " ");
+                }
+                formData = unescape(formData);
+                var formArray = formData.split("&");
+                for (var i=0; i < formArray.length; ++i) {
+                    document.writeln(formArray[i] + "<br />");
+                }
+                //]]>
+            </script>
+            
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" class="submenu">About Us</a>
+                        <ul>
+                            <li>
+                                <a href="sponsors.html">Our sponsors</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu">Attend Event</a>
+                        <ul>
+                            <li>
+                                <a href="attend_form.html">Fill Form</a>
+                            </li>
+                            <li>
+                                <a href="agenda.html">Agenda</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="submenu" href="#">Venue</a>
+                        <ul>
+                            <li>
+                                <a href="http://www.marriott.com/hotel-search/washington-dc.hotels.united-states/">Location</a>
+                            </li>
+                            <li><a class="submenu" href="#">Book flight</a>
+                                <ul>
+                                    <li><a href="https://www.kayak.com/">Kayak</a></li>
+                                    <li><a href="https://www.southwest.com/?clk=GNAVHOMELOGO">Southwest</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu">Contact Us</a>
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/?lang=en">Twitter</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <footer id="form_submission_footer">
+                &copy; Devs Meetup
+                <div class="content">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
+

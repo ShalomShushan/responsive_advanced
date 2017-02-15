@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html id="form_page">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Devs Meetup</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body id="form_body">
+        <div id="page">
+            <header id="form_header">
+                <a class="logo" href="index.html"><span>Devs Meetup</span></a>
+            </header>  
+            <form action="FormProcessor.html" id="form">
+                <section id="form_content_section">
+                    <div id="first_name_section">
+                        <label for="firstname" id="first_name_label">First name:</label> 
+                        <input type="text" name="firstname" id="first_name_text_box" value="" autofocus>
+                    </div>
+                    <div id="last_name_section">
+                        <label for="lastname" id="last_name_label">Last name:</label>
+                        <input type="text" name="lastname" id="last_name_text_box" value="">
+                    </div>
+                    <div id="street_address_section">
+                        <label for="street_address" id="street_address_label">Street Address:</label>
+                        <input type="text" name="street_address" id="street_address_text_box" value="">
+                    </div>
+                    <div id="city_section">
+                        <label for="city" id="city_label">City:</label>
+                        <input type="text" name="city" id="city_text_box" value="">
+                    </div>
+                    <div id="state_section">
+                        <label for="state" id="state_label">State:</label>
+                        <input type="text" name="state" id="state_text_box" value="">
+                    </div>
+                    <div id="zip_section">
+                        <label for="zip" id="zip_label">Zip:</label>
+                        <input type="number" name="zip" id="zip_text_box" value="">
+                    </div>
+                    <div id="email_section">
+                        <label for="email" id="email_label">Email Address:</label>
+                        <input type="email" name="email" id="email_text_box" value="">
+                    </div>
+                    <div id="phone_section">
+                        <label for="phone" id="city_label">Phone Number:</label>
+                        <input type="tel" name="phone" id="phone_text_box" value="">
+                    </div>
+                    <div id="comment_section">
+                        <label for="comment" id="comment_label">Comment:</label>
+                        <textarea type="text" name="comment" id="comment_text_box" value=""></textarea>
+                    </div>
+                </section>
+                <section id="buttons_section"> 
+                    <button type="submit" value="submit" id="submit_button">Submit</button>
+                    <button type="reset" value="reset" id="reset_button">Reset</button>
+                </section>
+            </form>
+            <nav id="form_nav">
+                <ul>
+                    <li id="about_us">
+                        <a href="#" class="submenu">About Us</a>
+                        <ul>
+                            <li>
+                                <a href="sponsors.html">Our sponsors</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="attend_event">
+                        <a href="#" class="submenu">Attend Event</a>
+                        <ul>
+                            <li>
+                                <a href="attend_form.html">Fill Form</a>
+                            </li>
+                            <li>
+                                <a href="agenda.html">Agenda</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="venue">
+                        <a class="submenu" href="#">Venue</a>
+                        <ul>
+                            <li>
+                                <a href="http://www.marriott.com/hotel-search/washington-dc.hotels.united-states/">Location</a>
+                            </li>
+                            <li><a class="submenu" href="#">Book flight</a>
+                                <ul>
+                                    <li><a href="https://www.kayak.com/">Kayak</a></li>
+                                    <li><a href="https://www.southwest.com/?clk=GNAVHOMELOGO">Southwest</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="contact_us">
+                        <a href="#" class="submenu">Contact Us</a>
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/?lang=en">Twitter</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <footer id="form_footer">
+                &copy; Devs Meetup
+                <div class="content form_footer_content">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

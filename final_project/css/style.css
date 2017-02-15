@@ -1,0 +1,792 @@
+/* 
+First page - responsive
+Second page - adaptive
+Third pade - liquid
+Fourth page - static
+fifth page - you didn't specify so I didn't touch it
+
+Regarding the form processor page: I couldn't style the text. I tried everything!
+I wanted to give it a margin but couldn't, creating a wrapper div doesn't work, the div is above the text somehow
+Also, the text from the comment box is overflowing and I can't handle it because I don't know how to affect the text there. I did overload: hidden, because overflow:scroll was scrolling the entire body.
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i');
+@import 'https://fonts.googleapis.com/css?family=Crimson+Text:400,700';
+
+
+/***********************/
+/* General CSS section */
+/***********************/
+html{
+    margin-bottom: 0;
+}
+
+#index {
+    background: none;
+    background: linear-gradient(rgba(170,150,250,0.6), rgba(250,250,150,0.3)) no-repeat;
+    background: -webkit-linear-gradient(rgba(170,150,250,0.6), rgba(250,250,150,0.3)) no-repeat;
+    background: -moz-linear-gradient(rgba(170,150,250,0.6), rgba(250,250,150,0.3)) no-repeat;
+    background: -o-linear-gradient(rgba(170,150,250,0.6), rgba(250,250,150,0.3)) no-repeat;
+
+    background-attachment: fixed;
+}
+
+body {
+    font-family: 'Open Sans', helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+#page {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/****************/
+/* Text section */
+/****************/
+
+h1 {
+    font-family: Crimson, Georgia, serif;
+    font-size: 2.5em;
+    font-weight: 400;
+    text-shadow: -4px 4px 4px rgb(150, 150, 199);
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-family: Crimson, Georgia, serif;
+    font-size: 1.8em;
+    font-weight: 400;
+    margin: 0;
+}
+
+h3 {
+    font-family: Crimson, Georgia, serif;
+    margin: 0 0 0.5em 0;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+p {
+    margin: 0 0 1em 0;
+}
+
+a {
+    color: firebrick;
+    text-decoration: none;
+}
+
+a:visited {
+    color: firebrick;
+    font-weight: 700;
+}
+
+/***************************/
+/* index page - responsive */
+/***************************/
+
+/* Header section */
+header {
+    height: 430px;
+    background: url(../images/banners/banner_1200.jpg) no-repeat center bottom;
+    position: relative;
+}
+
+header a.logo {
+    z-index: 1;
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 66px;
+    background: url(../images/Logo1.png) no-repeat 0 0;
+    background-size: contain;
+    top: 15px;
+    left: 20px;
+}
+
+header a.logo span {
+    display: none;
+}
+
+/* Main section */
+
+section {
+    padding: 0 30px;
+}
+
+section::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+section.main {
+    margin-top:  70px;
+    margin-bottom: 30px;
+    padding: 0;
+    background-color: rgba(170, 154, 154, 0.3);
+}
+
+section.main aside {
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+section.main .content {
+    margin: 15px;
+    background: no-repeat center top;
+    background-size: 75px 75px;
+    padding-top: 85px;
+}
+
+section.main aside h3 a {
+    color: cornflowerblue;
+    text-decoration: none;
+
+    -webkit-transition: text-shadow 0.5s;
+    -moz-transition: text-shadow 0.5s;
+    -o-transition: text-shadow 0.5s;
+    transition: text-shadow 0.5s;
+}
+
+section.main aside h3 a:hover {
+    text-shadow: -4px 4px 4px grey;
+}
+
+section.main aside .content.flight {
+    background-image: url(../images/icons/airplane.png);
+}
+
+section.main aside .content.sponsor {
+    background-image: url(../images/icons/coins.png);
+}
+
+section.main aside .content.attend {
+    background-image: url(../images/icons/list.png);
+}
+
+/* Navigation section */
+
+nav {
+    background-color: rgba(0, 0, 0, .65);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 50px 0 0 0;
+    width: 100%;
+}
+
+nav::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 125px;
+    position: relative;
+}
+
+nav ul li a:visited {
+    color: #fff;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+nav ul ul {
+    position: absolute;
+    top: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+}
+
+nav ul ul li {
+    position: relative;
+}
+
+nav ul ul ul {
+    left: 100%;
+    top: 0px;
+}
+
+/* top-level menu*/ 
+
+nav > ul {
+    padding-left: 200px;    
+}
+
+nav > ul > li {
+    float: left;
+}
+
+nav > ul > li > a {
+    width: auto;
+    padding: 10px 20px 15px 20px;
+}
+
+.submenu::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #fff;
+}
+
+nav > ul > li > .submenu::after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #fff;
+    left: 20px;
+    right: auto;
+    bottom: 6px;
+    top: auto;
+}
+
+/* Footer section */
+
+footer {
+    font-size: .8em;
+    margin: 40px;
+    color: black;
+}
+
+footer .content {
+    display: inline;
+}
+
+footer a {
+    margin-left: 30px;
+    color: black;
+
+    -webkit-transition: text-shadow 0.5s;
+    -moz-transition: text-shadow 0.5s;
+    -o-transition: text-shadow 0.5s;
+    transition: text-shadow 0.5s;
+}
+
+footer a:visited {
+    color: black;
+}
+
+footer a:hover {
+    color: black;
+    text-shadow: -4px 4px 4px darkblue;
+}
+
+/****************************/
+/* Sponsors page - adaptive */
+/****************************/
+
+#sponsors {
+    background-color: white;
+}
+
+#sponsors_body {
+    background: -webkit-linear-gradient(rgba(170, 170, 250, 1), rgba(255, 255, 255, 0.8));
+    background: -moz-linear-gradient(rgba(170, 170, 250, 1), rgba(255, 255, 255, 0.8));
+    background: -o-linear-gradient(rgba(170, 170, 250, 1), rgba(255, 255, 255, 0.8));
+    background: linear-gradient(rgba(170, 170, 250, 1), rgba(255, 255, 255, 0.8));
+    background-attachment: fixed;
+    margin-bottom: 0;
+}
+
+#sponsors section {
+    padding-bottom: 2em;
+    padding-top: 2em;
+    width: 1140px;
+}
+
+#sponsors #first_line img {
+    margin-top: 2em;
+    margin-right: 30px;
+}
+
+#sponsors #second_line img {
+    margin-top: 2em;
+    margin-right: 40px;
+}
+
+#sponsors #third_line img {
+    margin-top: 2em;
+    margin-right: 40px;
+}
+
+#sponsors #fourth_line img {
+    margin-top: 2em;
+    margin-right: 50px;
+}
+
+#sponsors section div {
+    height: 150px;
+    display: inline;
+    float: left;
+}
+
+/* nav - sponsors */
+#sponsors_nav {
+    width: 1200px;
+}
+
+/* Footer - sponsors */
+#sponsors_footer {
+    width: 1200px;
+    margin-left: 0;
+}
+
+#sponsors section img {
+    float: left;
+}
+
+/*********************/
+/* Form page -liquid */
+/*********************/
+
+#form_page {
+    background: -webkit-linear-gradient(rgba(55, 155, 255, 0.8), rgba(220, 255, 100, 0.5));
+    background: -moz-linear-gradient(rgba(55, 155, 255, 0.8), rgba(220, 255, 100, 0.5));
+    background: -o-linear-gradient(rgba(55, 155, 255, 0.8), rgba(220, 255, 100, 0.5));
+    background: linear-gradient(rgba(55, 155, 255, 0.8), rgba(220, 255, 100, 0.5));
+    background-attachment: fixed;
+}
+
+#form {
+    padding: 2em 0;
+    background-color: rgba(200, 200, 255, 0.7);
+}
+
+#form #form_content_section div {
+    margin-top: 1em;
+}
+
+#form #form_content_section div input {
+    width: 30%;
+    min-width: 190px;
+    height: 20px;
+}
+
+#form #form_content_section div label {
+    display: block;
+}
+
+#form #buttons_section {
+    margin-top: 2em;
+    width: 100%;
+}
+
+#form #buttons_section button {
+    margin-right: 8.5%;
+    padding: .7em 1.7em .7em 1.7em;
+    border-radius: 0.4em;
+    background-color: rgba(160, 255, 250, 0.5);
+    margin-top: 1em;
+}
+
+#reset_button,
+#submit_button
+{
+    min-width: 10%;
+}
+
+#comment_text_box {
+    height: 200px;
+    width: 50%;
+}
+
+#form_footer {
+    width: 100%;
+    min-width: 10%;
+}
+
+/********************************/
+/* Agenda page - static design  */
+/********************************/
+
+#agenda_html {
+    background: -webkit-linear-gradient(rgba(0,0,0,.6), rgba(100,100,100,.2));
+    background: -moz-linear-gradient(rgba(0,0,0,.6), rgba(100,100,100,.2));
+    background: -o-linear-gradient(rgba(0,0,0,.6), rgba(100,100,100,.2));
+    background: linear-gradient(rgba(0,0,0,.6), rgba(100,100,100,.2));
+    background-attachment: fixed;
+}
+
+#agenda_body {
+    margin: 0 350px;
+    background-color: white;
+    width: 1200px;
+}
+
+#agenda_body h1 {
+    margin-left: 0.6em;
+}
+
+#agenda_body h2 {
+    margin-left: 0.8em;
+}
+
+
+#agenda_header,
+#agenda_nav,
+#agenda_body section
+{
+    width: 1200px;
+}
+
+#agenda_footer {
+    width: 1200px;
+    padding-bottom: 2em;
+}
+
+
+}#agenda_body section {
+    padding: 0;
+}
+
+table {
+    width: 1000px;
+    border: 1px solid blue;
+    margin: 1.5em 1.5em;
+}
+
+tr, td {
+    margin: 0;
+    font-weight: 700;
+}
+
+table tr:nth-child(even) {
+    background-color: lightblue;
+}
+
+table tr:nth-child(odd) {
+    background-color: beige;
+}
+
+/****************************************************************************/
+/* Form Submission page - I did a fixed, you didn't specify and it's easier */
+/****************************************************************************/
+#form_submission #page {
+    background-color: rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    width: 1200px;
+}
+
+#form_submission_html {
+    background-color: rgba(120, 150, 200, 0.8);
+}
+
+#form_submission_footer {
+    padding: 2em 0;
+}
+
+/*****************/
+/* Media Queries */
+/*****************/
+@media screen and (max-width: 1060px) 
+{
+
+    /* sponsors page - images */
+    #sponsors section div {
+        display: block;
+        float: none;
+        clear: both;
+    }
+
+    #sponsors section div img {
+        padding-right: 15em;
+    }
+}
+
+@media screen and (max-width: 825px) 
+{ 
+    /* Header */
+    #main_header,
+    #sponsors_header
+    {
+        height: 300px;
+        background-image: url(../images/banners/banner_825.jpg);   
+    }
+
+    /* sponsors page images */ 
+    #sponsors section div img {
+        padding-right: 5em;
+    }
+}
+
+
+@media screen and (max-width: 760px) 
+{
+
+    /* Text */
+    h3 {
+        font-size: 1.1em;
+    }
+
+    /* Header */  
+    #main_header a.logo {
+        width: 145px;
+        height: 60px;
+    }
+
+    /* Main Section */
+    section.main {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    section.main aside div.content {
+        background-size: 55px 55px;
+        padding-top: 60px;
+    }
+
+    /* Navigation */
+    #main_nav,
+    #sponsors_nav
+    { 
+        padding-top: 80px;
+    }
+
+    #main_nav > ul,
+    #sponsors_nav > ul
+    {
+        padding-left: 10px;
+    }
+}
+
+/* Form nav issue - the screen doesn't allow all the li to stay. Keeping what seems important */
+@media screen and (max-width: 660px)
+{
+    /* form nav */
+    #form_nav ul #about_us {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 560px)
+{
+    /* form nav */
+    #form_nav ul #contact_us {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 435px)
+{
+    /* form nav */
+    #form_nav ul #attend_event {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 625px) 
+{
+
+    /* Text */
+    h3 {
+        margin-bottom: 0;
+        font-size: 1em;
+    }
+
+    /* Header */
+    #main_header,
+    #sponsors_header    
+    {
+        height: 160px;
+        background-image: url(../images/banners/banner_625.jpg);
+        background-position: left top;
+    }
+
+    #main_header a.logo,
+    #sponsors_header a.logo
+    {
+        width: 100%;
+        height: 66px;
+        left: 0px;
+        top: 0px;
+        background-color: rgba(0,0,0,.65);
+        background-position: 20px center;
+    }
+
+    /* Navigation */
+    #main_nav,
+    #sponsors_nav
+    {
+        position: static;
+        width: auto;
+        padding: 20px 15px;
+        background-color: rgba(170, 100, 100, .8);
+    }
+
+    #main_nav ul, #sponsors_nav ul,
+    #main_nav ul ul, #sponsors_nav ul ul,
+    #main_nav ul ul ul, #sponsors_nav ul ul ul
+    {
+        display: block;
+        position: static;
+    }
+
+    #main_nav > ul,
+    #sponsors_nav > ul,
+    {
+        padding: 0;
+    }
+
+    #main_nav > ul > li,
+    #sponsors_nav > ul li
+    {
+        float: none;
+        margin-top: 25px;
+    }
+
+    #main_nav ul li:hover,
+    #sponsors_nav ul li:hover
+    {
+        background: none;
+    }
+
+    #main_nav ul li a,
+    #sponsors_nav ul li a
+    {
+        display: block;  
+        margin: 8px 10px;
+        padding: 8px 15px;
+        border: 1px solid rgba(255, 255, 255, .25);
+        width: auto;
+    }
+
+    #main_nav ul li a:hover,
+    #sponsors_nav ul li a:hover
+    {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    #main_nav ul ul,
+    #sponsors_nav ul ul
+    {
+        background: none;
+    }
+
+    #main_nav ul ul li a,
+    #sponsors_nav ul ul li a
+    {
+        margin-left: 30px;
+    }
+
+    #main_nav ul ul ul li a,
+    #sponsors_nav ul ul ul li a
+    {
+        margin-left: 60px;
+    }
+
+    #main_nav a.submenu::after,
+    #sponsors_nav a.submenu:after
+    {
+        display: none;
+    }
+
+    /* Main Section */
+    section.main aside {
+        width: 100%;
+        float: none;
+        text-align: left;
+    }
+
+    section.main aside div.content {
+        margin: 8px 20px 8px 0;
+        padding: 5px 0px 10px 85px;
+        background-size: 50px 50px;
+        background-position: 20px 5px;
+    }
+
+    /* Footer */
+    #main_footer div.content {
+        display: block;
+        margin-top: 15px;
+    }
+
+    #main_footer div.content a {
+        margin: 0 20px 0 0;
+    }
+
+    /* sponsors page images */
+    #sponsors section div img {
+        float: none;
+        display: block;
+    }
+
+    #sponsors section {
+        margin-top: -2.5em;
+    }
+}
+
+@media screen and (max-width: 425px) 
+{
+
+    /* Header */
+    #main_header,
+    #sponsors_header
+    {
+        height: 110px;
+        background-image: url(../images//banners/banner_425.jpg);
+    }
+
+    #main_header a.logo {
+        height: 36px;
+        background: rgba(0, 0, 0, .65) url(../images/small-logo.png) no-repeat center;
+        background-size: 126px 17px;
+    }
+
+    /* Footer */    
+    #main_footer::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    #main_footer div.content a {
+        display: inline-block;
+        margin: 0 0 10px 0;
+        float: left;
+        clear: both;
+    }
+
+    /* sponsors page footer */
+    #sponsors_footer {
+        margin-left: 1em;
+    }
+
+    #sponsors_footer div {
+        clear: both;
+        display: block;
+        margin-left: -2em;
+    }
+}
+
